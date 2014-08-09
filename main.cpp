@@ -4,14 +4,14 @@
 
 using namespace std;
 
-vector<unsigned short> v1, v2;
-unsigned short x, count;
+vector<int> v1, v2;
+int x, count;
 
 void initialize()
 {
     cin >> x;
 
-    while (x > 0)
+    while (x != 0)
     {
         v2.push_back(x % 10);
         x /= 10;
@@ -24,14 +24,14 @@ void initialize()
         for (size_t i = 0; i < n; ++i)
         {
             size_t index = n - i - 1;
-            unsigned short element = v2.at(index);
+            int element = v2.at(index);
 
             v1.push_back(element);
         }
     }
 }
 
-void show(vector<unsigned short> v)
+void show(vector<int> v)
 {
     for (size_t i = 0; i < v.size(); ++i)
         cout << v.at(i);
